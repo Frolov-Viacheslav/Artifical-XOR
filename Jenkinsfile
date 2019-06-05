@@ -1,7 +1,15 @@
+#!groovy
+properties([disableConcurrentBuilds()])
+
 pipeline {
-  agent any
+  agent{
+    label 'master'
+  }
+  options {
+    timestamps()
+  }
   stages {
-    stage('') {
+    stage('First step') {
       steps {
         echo 'Hello world!!!'
       }
