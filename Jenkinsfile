@@ -5,7 +5,8 @@ pipeline {
   agent{
     label 'master'
   }
-  options {
+ triggers {pollSCM('*****')} 
+ options {
     timestamps()
   }
   stages {
