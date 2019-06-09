@@ -5,7 +5,7 @@ pipeline {
   agent{
     label 'slave02'
   }
- //triggers {pollSCM('* * * * *')} 
+ triggers {pollSCM('* * * * *')} 
  options {
     timestamps()
   }
