@@ -12,17 +12,20 @@ pipeline {
   stages {
     stage('Create file') {
       steps {
-        cd '/home/slava'
-        echo 'Kraken' > file.txt
-        //scp file.txt 192.168.0.107:/home/slava
+        bash '''#!/bin/bash
+                 cd '/home/slava'
+                 echo 'Kraken' > file.txt 
+             '''
       }
     }
      stage('Send file') {
       steps {
-        //scp file.txt 192.168.0.107:/home/slava
-        ssh '192.168.0.107'
-        cd '/home/slava'
-        touch 'file.txt'
+        bash '''#!/bin/bash
+                 scp file.txt 192.168.0.107:/home/slava
+                 ssh '192.168.0.107'
+                 cd /home/slava
+                 cat file.txt
+             '''
       }
     }
   }
