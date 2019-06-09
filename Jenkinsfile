@@ -3,9 +3,9 @@ properties([disableConcurrentBuilds()])
 
 pipeline {
   agent{
-    label 'master'
+    label 'slave02'
   }
- triggers {pollSCM('* * * * *')} 
+ //triggers {pollSCM('* * * * *')} 
  options {
     timestamps()
   }
