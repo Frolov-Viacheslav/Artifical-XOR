@@ -13,7 +13,7 @@ pipeline {
     stage('Create file') {
       steps {
         sh '''cd '/home/slava'
-              echo 'Kraken' > file.txt 
+              touch file.txt 
            '''
       }
     }
