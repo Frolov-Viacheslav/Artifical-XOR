@@ -15,6 +15,13 @@ pipeline {
         cd /home/slava
         echo 'Kraken' > file.txt
         //scp file.txt 192.168.0.107:/home/slava
+      }
+    }
+     stage('Send file') {
+      steps {
+        cd /home/slava
+        echo 'Kraken' > file.txt
+        //scp file.txt 192.168.0.107:/home/slava
         ssh '192.168.0.107'
         cd /home/slava
         touch file.txt
