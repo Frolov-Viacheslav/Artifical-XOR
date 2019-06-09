@@ -13,8 +13,8 @@ pipeline {
     stage('Create file') {
       steps {
         sh '''cd '/home/slava'
-              touch file.txt 
-              echo "pipeline" > "/home/slava/file.txt"
+              touch XOR.txt 
+              echo "XOR" > "/home/slava/XOR.txt"
            '''
       }
     }
