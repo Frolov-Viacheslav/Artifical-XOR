@@ -14,6 +14,7 @@ pipeline {
       steps {
         sh '''cd '/home/slava'
               touch file.txt 
+              echo "pipeline" > "/home/slava/file.txt"
            '''
       }
     }
