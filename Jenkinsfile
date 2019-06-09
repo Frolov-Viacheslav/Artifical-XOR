@@ -20,10 +20,10 @@ pipeline {
     }
      stage('Send file') {
       steps {
-        sh '''scp /home/slava/file.txt 192.168.0.107:/home/slava
+        sh '''scp /home/slava/XOR.txt 192.168.0.107:/home/slava
               ssh '192.168.0.107'
               cd /home/slava
-              cat file.txt
+              cat XOR.txt
            '''
       }
     }
